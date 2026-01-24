@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calcAverage(arr){
+            if (arr.length==0) return 0;
+            var total =0;
+            for (let i=0; i<arr.length; i++){
+                total+=arr[i];
+            }
+            return total/arr.length;
+        }
+
+        function checkWinner(avgDolphins, avgKoalas){
+            if (avgDolphins>=2*avgKoalas){
+                console.log("Dolphins win ("+avgDolphins+" vs. "+avgKoalas+")");
+            }
+            else if (avgDolphins<=2*avgKoalas){
+                console.log("Koalas win ("+avgKoalas+" vs. "+avgDolphins+")");
+            }
+            else console.log("Draw ("+avgKoalas+" vs. "+avgDolphins+")");
+        }
+        console.log("Data 1:");
+        var arr1 = [44, 23, 77];
+        var arr2 = [65, 54, 49];
+        checkWinner(calcAverage(arr1), calcAverage(arr2));
+
+        console.log("Data 2:");
+        var arr3 = [85, 54, 41];
+        var arr4 = [23, 34, 27];
+        checkWinner(calcAverage(arr3), calcAverage(arr4));
+    </script>
+</body>
+</html>
