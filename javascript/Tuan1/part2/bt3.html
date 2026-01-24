@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj1 = {
+            name: "Mark Miller",
+            mass: 78.0,
+            height: 1.69
+        }
+        var obj2 = {
+            name: "John Smith",
+            mass: 92.0,
+            height: 1.95
+        }
+        function calcBMI(weight, height) {
+            let bmi = weight / (height * height);
+            return bmi;
+        }
+
+        obj1.BMI = calcBMI(obj1.mass, obj1.height)
+        obj2.BMI = calcBMI(obj2.mass, obj2.height)
+        console.log(obj1);
+        console.log(obj2);
+    </script>
+</body>
+</html>
