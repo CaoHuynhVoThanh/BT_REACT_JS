@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calcTip(value){
+            if (value>=50 && value<=300){
+                return value*0.15;
+            }
+            else return value*0.3;
+        }
+
+        var bills = [125, 555, 44];
+        console.log("Bills: "+bills);
+        for (let i=0; i<bills.length; i++){
+            bills[i]+=calcTip(bills[i]);
+        }
+        console.log("Total: "+ bills)
+    </script>
+</body>
+</html>
