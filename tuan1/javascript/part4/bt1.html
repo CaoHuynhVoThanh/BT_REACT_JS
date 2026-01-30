@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+      font-family: sans-serif;
+      background-color: #222;
+      color: #eee;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      padding: 2rem;
+    }
+
+    #number {
+      background: #eee;
+      color: #333;
+      font-size: 6rem;
+      width: 15rem;
+      margin: 2rem auto;
+      padding: 1rem 0;
+    }
+
+    #message {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    #score,
+    #highscore {
+      font-weight: bold;
+    }
+
+    #guess {
+      font-size: 2rem;
+      width: 6rem;
+      text-align: center;
+    }
+
+    button {
+      font-size: 1.5rem;
+      padding: 0.5rem 1rem;
+      margin: 0.5rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+    <header>
+    <h1>Guess My Number!</h1>
+    <p id="between">(Between 1 and 20)</p>
+    <button id="again">Again!</button>
+    <div id="number">?</div>
+  </header>
+
+  <main>
+    <p id="mess">Start guessing...</p>
+    <input id="guess" />
+    <button id="check">Check!</button>
+
+    <p>Score: <span id="score">20</span></p>
+    <p>Highscore: <span id="highscore">0</span></p>
+  </main>
+
+  <script>
+    var score=20;
+    var secretNum = Math.floor(Math.random() * 21);
+    document.getElementById("check").addEventListener('click', function(){
+        var number = Number(document.getElementById("guess").value);
+        console.log(number);
+        if (number>secretNum){
+            document.getElementById("mess").textContent="Too high";
+            document.getElementById("score").textContent=--score;
+        }
+        else if (number<secretNum){
+            document.getElementById("mess").textContent="Too low";
+            document.getElementById("score").textContent=--score;
+        }
+        else{
+            document.getElementById("mess").textContent="Exactly!!!";
+            document.getElementById("score").textContent=score;
+            document.getElementById("number").textContent=""+secretNum;
+            document.getElementById("check").disable = true;
+        }
+    });
+    document.getElementById("again").addEventListener('click', function(){
+        score = 20;
+        secretNum = Math.floor(Math.random() * 21);
+        document.getElementById("score").textContent=score;
+        document.getElementById("mess").textContent="Start guessing...";
+        document.getElementById("number").textContent="?";
+        document.getElementById("guess").textContent="";
+    });
+  </script>
+</body>
+</html>
