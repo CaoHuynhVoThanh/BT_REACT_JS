@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const poll = {
+            question: "What is your favourite programming language?",
+            options: ["0: JavaScript", "1: Python", "2: Rust", "3: C++"],
+            // This generates [0, 0, 0, 0]. More in the next section!
+            answers: new Array(4).fill(0),
+            };
+        function registerNewAnswer(poll){
+            console.log(poll.question);
+            for (var p of poll.options) console.log(p);
+            ans = prompt("Chosen one: ");
+            poll.answers[ans]++;
+            console.log(poll.answers);
+        }
+        registerNewAnswer(poll);
+    </script>
+</body>
+</html>
