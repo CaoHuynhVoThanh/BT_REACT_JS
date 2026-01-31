@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkDogs(dogsJulia, dogsKate){
+            trueDogsJulia = dogsJulia.slice(0, dogsJulia.length-1);
+            dogsAge = trueDogsJulia.concat(dogsKate);
+            for (var i=0; i<dogsAge.length; i++){
+                if (dogsAge[i]>2) console.log("Dog number "+(i+1)+ " is an adult, and is "+dogsAge[i]+" years old");
+                else console.log("Dog number "+(i+1)+ " is still a puppy");
+            }
+        }
+        console.log("Tes1:");
+        Julia1 = [3, 5, 2, 12, 7];
+        Kate1 =  [4, 1, 15, 8, 3];
+        checkDogs(Julia1, Kate1);
+        console.log("Test2:");
+        Julia2= [9, 16, 6, 8, 3];
+        Kate2 = [10, 5, 6, 1, 4];
+        checkDogs(Julia2, Kate2);
+    </script>
+</body>
+</html>
