@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const dogs = [
+            { weight: 22, curFood: 250, owners: ['Alice', 'Bob'] },
+            { weight: 8, curFood: 200, owners: ['Matilda'] },
+            { weight: 13, curFood: 275, owners: ['Sarah', 'John'] },
+            { weight: 32, curFood: 340, owners: ['Michael'] },
+            ];
+            for (dog of dogs){
+                dog.recommendedFood = dog.weight**0.75*28;
+            }
+            console.log(dogs);
+            for (dog of dogs){
+                if (dog.owners.includes('Sarah')){
+                    if (dog.curFood<dog.recommendedFood-dog.recommendedFood*0.1){
+                        console.log("Recommended food: "+dog.recommendedFood);
+                        console.log("Sarah's dog eating too little!: "+dog.curFood);
+                    } else if (dog.curFood>dog.recommendedFood+dog.recommendedFood*0.1){
+                        console.log("Recommended food: "+dog.recommendedFood);
+                        console.log("Sarah's dog eating too much!: "+dog.curFood);
+                    }
+                    else{   
+                        console.log("Recommended food: "+dog.recommendedFood);
+                        console.log("Sarah's dog eating ok: "+dog.curFood);
+                    }
+                }
+            }
+            var ownersEatTooMuch = []
+            var ownersEatTooLittle = [];
+            for (dog of dogs){
+                if (dog.curFood<dog.recommendedFood-dog.recommendedFood*0.1){
+                    ownersEatTooLittle.push(...dog.owners);
+                }
+                else if (dog.curFood>dog.recommendedFood+dog.recommendedFood*0.1){
+                    ownersEatTooMuch.push(...dog.owners);
+                }
+            }
+            var mess1 = ownersEatTooLittle[0];
+            for (var i=1; i<ownersEatTooLittle.length; i++){
+                mess1+=" and "+ownersEatTooLittle[i];    
+            }
+            mess1+="'s dogs eat too little!";
+            console.log(mess1);  
+            
+            var mess2 = ownersEatTooMuch[0];
+            for (var i=1; i<ownersEatTooMuch.length; i++){
+                mess2+=" and "+ownersEatTooMuch[i];    
+            }
+            mess2+="'s dogs eat too much!";
+            console.log(mess2);  
+    </script>
+</body>
+</html>
