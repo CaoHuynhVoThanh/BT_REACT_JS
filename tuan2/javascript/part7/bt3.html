@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("Test1:");
+        data1=[5, 2, 4, 1, 15, 8, 3];
+        result1 = data1.filter(n=>n>2)
+                    .map(n=>16+n*4)
+                    .reduce((sum, n, _, arr)=>sum+=n/arr.length, 0);
+        console.log(result1)
+        console.log("Test2:");
+        data2= [16, 6, 10, 5, 6, 1, 4];
+        result2 = data2.filter(n=>n>2)
+                    .map(n=>16+n*4)
+                    .reduce((sum, n, _, arr)=>sum+=n/arr.length, 0);
+        console.log(result2)
+    </script>
+</body>
+</html>

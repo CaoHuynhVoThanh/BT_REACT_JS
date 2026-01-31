@@ -14,7 +14,7 @@
                 else humanAge.push(2*age);
             }
             console.log("Human age: "+humanAge);
-            var adultAge = humanAge.filter(age=>age>2);
+            var adultAge = humanAge.filter(age=>age>=18);
             console.log("Adult human age: "+ adultAge);
             var total =0;
             for (age of adultAge) total+=age;
