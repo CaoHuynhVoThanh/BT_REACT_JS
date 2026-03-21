@@ -1,0 +1,22 @@
+[
+    { "id": 1, "name": "Smartphone X1", "category": "Electronics", "price": 199.99 },
+    { "id": 2, "name": "Men’s Casual T-Shirt", "category": "Clothing", "price": 29.99 },
+    { "id": 3, "name": "Premium Blender 5000", "category": "Home Appliances", "price": 499.99 },
+    { "id": 4, "name": "Running Shoes Pro", "category": "Sports", "price": 59.99 },
+    { "id": 5, "name": "Wooden Coffee Table", "category": "Furniture", "price": 149.99 },
+    { "id": 6, "name": "Bestselling Novel “Journey Home”", "category": "Books", "price": 15.99 },
+    { "id": 7, "name": "Educational Building Blocks", "category": "Toys", "price": 24.99 },
+    { "id": 8, "name": "Wireless Headphones", "category": "Electronics", "price": 99.99 },
+    { "id": 9, "name": "Organic Facial Cream", "category": "Beauty", "price": 19.99 },
+    { "id": 10, "name": "Gourmet Chocolate Box", "category": "Food", "price": 4.99 },
+    { "id": 11, "name": "Women’s Denim Jacket", "category": "Clothing", "price": 39.99 },
+    { "id": 12, "name": "Air Fryer Deluxe 3L", "category": "Home Appliances", "price": 229.99 },
+    { "id": 13, "name": "Yoga Mat Eco-Friendly", "category": "Sports", "price": 89.99 },
+    { "id": 14, "name": "Ergonomic Office Chair", "category": "Furniture", "price": 299.99 },
+    { "id": 15, "name": "4K LED Smart TV", "category": "Electronics", "price": 399.99 },
+    { "id": 16, "name": "Science Encyclopedia for Kids", "category": "Books", "price": 25.99 },
+    { "id": 17, "name": "Remote Control Car", "category": "Toys", "price": 14.99 },
+    { "id": 18, "name": "Luxury Perfume 50ml", "category": "Beauty", "price": 49.99 },
+    { "id": 19, "name": "Organic Granola Pack", "category": "Food", "price": 12.99 },
+    { "id": 20, "name": "Tablet Pro 10-inch", "category": "Electronics", "price": 249.99 }
+  ]
