@@ -1,19 +1,22 @@
-import React from 'react';
-import { useRecoilValue } from 'recoil';
-import { userAtom } from './atoms/userAtom';
-import TodoInput from "./components/TodoInput";
-import TodoList from "./components/TodoList";
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from './assets/vite.svg'
+import heroImg from './assets/hero.png'
+import './App.css'
+import Header from './components/Header'
+import Poster from './components/Poster'
+import Recipe from './components/Recipe'
 
 function App() {
-
+  const [count, setCount] = useState(0)
 
   return (
-    <div style={{ maxWidth: 500, margin: "0 auto" }}>
-      <h2>Todo List (Recoil)</h2>
-      <TodoInput />
-      <TodoList />
-    </div>
-  );
+    <>
+      <Header></Header>
+      <Poster></Poster>
+      <Recipe title="This Summer Recipes" detail="We have all your Independence Day sweets covered."></Recipe>
+    </>
+  )
 }
 
-export default App;
+export default App
