@@ -1,0 +1,48 @@
+.editor-item-container{
+    display: flex   ;
+    width: 500px;
+    height: 200px;
+    gap: 20px;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid rgb(241, 241, 241);
+}
+
+.editor-item-container img{
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+}
+
+.e-item-detail{
+    gap: 50px;
+}
+
+.e-title{
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.e-time{
+    font-weight: lighter;
+    font-size: 12px;
+}
+
+.e-auth{
+    display: flex;
+    align-items: center;
+}
+
+.e-auth img{
+    border-radius: 20px;
+    padding-right: 10px;
+}
+
+.e-auth img{
+    width: 40px;
+    height: auto;
+}
+
+.e-des{
+    margin-top: 20px
+}

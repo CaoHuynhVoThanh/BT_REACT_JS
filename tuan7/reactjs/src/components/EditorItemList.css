@@ -1,0 +1,19 @@
+/* .summer-container{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+} */
+.auth-list{
+    position: absolute;
+    top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1440px; 
+    height: 80px; 
+    margin-top: 200px;
+    background: #FFFFFFFF; 
+    border-radius: 0px; 
+    margin: 50px;
+    gap: 20px;
+}

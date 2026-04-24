@@ -1,10 +1,10 @@
 import "./Recipe.css"
 
-function Recipe({props, state}){
+function Recipe(props){
     return(
         <div className="summer-container">
-            <div className="recipe-title">{props.title}</div>
-            <div className="recipe-detail">{props.detail}</div>
+            <div className="recipe-title">{props?.title}</div>
+            <div className="recipe-detail">{props?.detail}</div>
             <div className="recipe-list">
             <div className="recipe-container">    
                 <img className="recipe-img" src="./recipe1.jpg"></img>
