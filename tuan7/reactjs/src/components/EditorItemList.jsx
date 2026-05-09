@@ -1,17 +1,18 @@
 import "./EditorItemList.css"
 import EditorItem from "./EditorItem";
 
-export default function EditorItemList(props) {
+export default function EditorItemList({ title, detail, items = [] }) {
     return(
-        <div className="summer-container">
-            <div className="recipe-title">{props?.title}</div>
-            <div className="recipe-detail">{props?.detail}</div>
+        <section className="recipe-section editor-section">
+            <div className="section-heading">
+                <h2 className="recipe-title">{title}</h2>
+                <p className="recipe-detail">{detail}</p>
+            </div>
             <div className="auth-list">
-                <EditorItem/>
-                <EditorItem/>
-                <EditorItem/>
-                <EditorItem/>
+                {items.map((item) => (
+                    <EditorItem key={item.title} item={item}/>
+                ))}
             </div>      
-        </div>
+        </section>
     );
 };

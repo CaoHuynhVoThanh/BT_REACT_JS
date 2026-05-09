@@ -1,0 +1,141 @@
+.site-footer {
+  background: #1f232b;
+  color: #ffffff;
+  margin-top: 56px;
+  padding: 48px 72px 42px;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: minmax(280px, 1.6fr) repeat(3, minmax(140px, 0.55fr));
+  gap: 56px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.site-footer h3 {
+  font-family: Poppins, Arial, sans-serif;
+  font-size: 14px;
+  margin: 0 0 14px;
+}
+
+.site-footer p,
+.site-footer a,
+.site-footer span {
+  color: #d7dbe3;
+  font-family: Manrope, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.65;
+  text-decoration: none;
+}
+
+.footer-about p {
+  max-width: 430px;
+  margin: 0 0 18px;
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 14px;
+  max-width: 460px;
+}
+
+.subscribe-form input {
+  flex: 1;
+  min-width: 0;
+  height: 36px;
+  border: 0;
+  border-radius: 6px;
+  padding: 0 14px;
+}
+
+.subscribe-form button {
+  border: 0;
+  border-radius: 6px;
+  background: #f44b87;
+  color: #fff;
+  padding: 0 18px;
+  font-weight: 700;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-bottom {
+  max-width: 1280px;
+  margin: 72px auto 0;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 18px;
+}
+
+.footer-brand strong {
+  font-family: Poppins, Arial, sans-serif;
+  font-size: 24px;
+}
+
+.footer-mark {
+  width: 34px;
+  height: 28px;
+  position: relative;
+}
+
+.footer-mark span,
+.brand-mark span {
+  position: absolute;
+  bottom: 2px;
+  width: 10px;
+  height: 22px;
+  border-radius: 10px 10px 4px 4px;
+  background: currentColor;
+  transform-origin: bottom center;
+}
+
+.footer-mark span:nth-child(1),
+.brand-mark span:nth-child(1) {
+  left: 5px;
+  transform: rotate(-28deg);
+}
+
+.footer-mark span:nth-child(2),
+.brand-mark span:nth-child(2) {
+  left: 12px;
+}
+
+.footer-mark span:nth-child(3),
+.brand-mark span:nth-child(3) {
+  left: 19px;
+  transform: rotate(28deg);
+}
+
+@media (max-width: 860px) {
+  .site-footer {
+    padding: 40px 22px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 34px 22px;
+  }
+}
+
+@media (max-width: 560px) {
+  .footer-main {
+    grid-template-columns: 1fr;
+  }
+
+  .subscribe-form {
+    flex-direction: column;
+  }
+}

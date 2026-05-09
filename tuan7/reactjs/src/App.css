@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Manrope:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #171a1f;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+.app {
+  min-height: 100vh;
+  background: #ffffff;
+}

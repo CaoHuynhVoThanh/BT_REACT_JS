@@ -1,199 +1,112 @@
-.poster-container{
-  /* Image 32 */
-  position: absolute; 
-  top: 0px; 
-  left: 2px; 
-  width: 1438px; 
-  height: 871px; 
-  border-radius: 0px; 
-
+.poster {
+  min-height: 840px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 88px 9vw;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0)),
+    url("https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=2200&q=85") center / cover;
 }
 
-/* Container 90 */
-.container2 {
-    position: absolute; 
-    top: 310px; 
-    left: 108px; 
-    width: 413px; 
-    height: 418px; 
-    background: #FFFFFFFF; /* white */
-    border-radius: 12px; /* border-xl */
-    border-width: 1px; 
-    border-color: #854EF4FF; /* tertiary3-500 */
-    border-style: dashed; 
-  }
+.featured-card {
+  width: min(410px, 100%);
+  min-height: 416px;
+  padding: 70px 46px 42px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #ffffff;
+  border: 1px dashed #854ef4;
+  border-radius: 12px;
+  box-shadow: 0 18px 36px rgba(23, 26, 31, 0.12);
+}
 
-/* Image 32 */
-.poster-image {
-    position: absolute; 
-    top: 84px; 
-    left: 2px; 
-    width: 1438px; 
-    height: 871px; 
-    border-radius: 0px; 
-  }
-
-/* Button 25 */
 .btn-top {
-    position: absolute; 
-    top: -18px; 
-    left: 92px; 
-    width: 229px; 
-    height: 36px; 
-    padding: 0 12px; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    font-family: Manrope; 
-    font-size: 14px; 
-    line-height: 22px; 
-    font-weight: 400; 
-    color: #5D4600FF; /* tertiary1-800 */
-    background: #FFC415FF; /* tertiary1-500 */
-    opacity: 1; 
-    border: none; 
-    border-radius: 6px; /* border-m */
-  }
-  /* Hover */
-  .btn-top:hover {
-    color: #5D4600FF; /* tertiary1-800 */
-    background: #D7A100FF; /* tertiary1-600 */
-  }
-  /* Pressed */
-  .btn-top:hover:active {
-    color: #5D4600FF; /* tertiary1-800 */
-    background: #B88A00FF; /* tertiary1-650 */
-  }
-  /* Disabled */
-  .btn-top:disabled {
-    opacity: 0.4; 
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 230px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffc415;
+  color: #5d4600;
+  border-radius: 6px;
+  font-family: Manrope, Arial, sans-serif;
+  font-size: 14px;
+}
+
+.text-title {
+  font-family: Poppins, Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: #f44b87;
+  margin-bottom: 22px;
+}
+
+.text-detail {
+  font-family: Manrope, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #171a1f;
+  margin-bottom: 66px;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  border-radius: 50%;
+  background: #fbc8da;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-family: Manrope, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #565e6c;
+  margin-bottom: 24px;
+}
+
+.btn-view {
+  min-width: 112px;
+  height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 16px;
+  background: #f44b87;
+  border: 0;
+  border-radius: 12px;
+  color: #ffffff;
+  font-family: Manrope, Arial, sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-view:hover {
+  background: #f0105e;
+}
+
+@media (max-width: 760px) {
+  .poster {
+    min-height: 680px;
+    padding: 70px 22px;
+    align-items: end;
   }
 
-  .text-title {
-    position: absolute; 
-    top: 65px; 
-    left: 132px; 
-    font-family: Poppins; /* Heading */
-    font-size: 20px; 
-    line-height: 30px; 
-    font-weight: 700; 
-    color: #F44B87FF; /* primary-500 */
+  .featured-card {
+    padding: 58px 26px 32px;
   }
 
   .text-detail {
-    position: absolute; 
-    top: 107px; 
-    left: 37px; 
-    width: 340px; 
-    height: 88px; 
-    font-family: Manrope; /* Body */
-    font-size: 14px; 
-    line-height: 22px; 
-    font-weight: 400; 
-    color: #171A1FFF; /* neutral-900 */
+    margin-bottom: 40px;
   }
-
-/* Avatar 19 */
-.avatar {
-    position: absolute; 
-    top: 250px; 
-    left: 189px; 
-    width: 36px; 
-    height: 36px; 
-    background: #FBC8DAFF; /* primary-200 */
-    opacity: 1; 
-    overflow: hidden; 
-    border-radius: 18px; 
-  }
-  .avatar img {
-    width: 36px; 
-    height: 36px; 
-  }
-  .avatar .badge {
-    width: 9px; 
-    height: 9px; 
-    border-radius: 4.5px; 
-  }
-  .avatar.active .badge {
-    background: #000000FF; /* transparent */
-    opacity: 0; 
-    border-width: 1.5px; 
-    border-color: #FFFFFFFF; 
-  }
-  .avatar.inactive .badge {
-    background: #000000FF; /* transparent */
-    opacity: 0; 
-    border-width: 1.5px; 
-    border-color: #FFFFFFFF; 
-  }
-  .avatar.idle .badge {
-    background: #000000FF; /* transparent */
-    opacity: 0; 
-    border-width: 1.5px; 
-    border-color: #FFFFFFFF; 
-  }
-  .avatar.do_not_disturb .badge {
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    font-size: 9px; 
-    line-height: 9px; 
-    color: #FFFFFFFF; /* white */
-    background: #000000FF; /* transparent */
-    opacity: 0; 
-    border-width: 1.5px; 
-    border-color: #FFFFFFFF; 
-  }
-
-  .name {
-    position: absolute; 
-    top: 294px; 
-    left: 159px; 
-    font-family: Manrope; /* Body */
-    font-size: 14px; 
-    line-height: 22px; 
-    font-weight: 600; 
-    color: #565E6CFF; /* neutral-600 */
-  }
-
-  /* Button 24 */
-.btn-view {
-    position: absolute; 
-    top: 340px; 
-    left: 149px; 
-    width: 106px; 
-    height: 46px; 
-    padding: 0 12px; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    font-family: Manrope; 
-    font-size: 14px; 
-    line-height: 22px; 
-    font-weight: 400; 
-    color: #FFFFFFFF; /* white */
-    background: #F44B87FF; /* primary-500 */
-    opacity: 1; 
-    border: none; 
-    border-radius: 12px; /* border-xl */
-    gap: 6px; 
-  }
-  .btn-view .icon {
-    width: 16px; 
-    height: 16px; 
-    fill: #FFFFFFFF; /* white */
-  }
-  /* Hover */
-  .btn-view:hover {
-    color: #FFFFFFFF; /* white */
-    background: #F0105EFF; /* primary-600 */
-  }
-  /* Pressed */
-  .btn-view:hover:active {
-    color: #FFFFFFFF; /* white */
-    background: #D20D52FF; /* primary-650 */
-  }
-  /* Disabled */
-  .btn-view:disabled {
-    opacity: 0.4; 
-  }
+}

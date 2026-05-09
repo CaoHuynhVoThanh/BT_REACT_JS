@@ -1,48 +1,87 @@
-.editor-item-container{
-    display: flex   ;
-    width: 500px;
-    height: 200px;
-    gap: 20px;
-    padding: 10px;
-    border-radius: 12px;
-    border: 1px solid rgb(241, 241, 241);
+.editor-item-container {
+  min-height: 220px;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 22px;
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid #eef0f4;
+  background: #ffffff;
+  box-shadow: 0 1px 4px rgba(23, 26, 31, 0.08);
 }
 
-.editor-item-container img{
-    width: 200px;
-    height: 200px;
-    border-radius: 12px;
+.editor-image {
+  width: 100%;
+  height: 188px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
-.e-item-detail{
-    gap: 50px;
+.e-item-detail {
+  position: relative;
+  padding-right: 38px;
 }
 
-.e-title{
-    font-weight: bold;
-    font-size: 24px;
+.editor-bookmark {
+  right: 0;
+  top: 0;
+  bottom: auto;
 }
 
-.e-time{
-    font-weight: lighter;
-    font-size: 12px;
+.e-title {
+  margin: 0 0 4px;
+  font-family: Poppins, Arial, sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.35;
+  color: #171a1f;
 }
 
-.e-auth{
-    display: flex;
-    align-items: center;
+.e-time {
+  margin-bottom: 16px;
+  font-family: Manrope, Arial, sans-serif;
+  font-size: 12px;
+  color: #565e6c;
 }
 
-.e-auth img{
-    border-radius: 20px;
-    padding-right: 10px;
+.e-auth {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
 }
 
-.e-auth img{
-    width: 40px;
-    height: auto;
+.e-auth img {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
-.e-des{
-    margin-top: 20px
+.e-name {
+  font-family: Manrope, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #323842;
+}
+
+.e-des {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  font-family: Manrope, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.65;
+  color: #323842;
+}
+
+@media (max-width: 560px) {
+  .editor-item-container {
+    grid-template-columns: 1fr;
+  }
+
+  .editor-image {
+    height: 210px;
+  }
 }

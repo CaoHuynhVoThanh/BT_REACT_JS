@@ -1,17 +1,18 @@
 import "./EditorItem.css"
 
-export default function EditorItem() {
+export default function EditorItem({ item }) {
     return(
         <div className="editor-item-container">
-            <img src="/EItem1.jpg" alt="" />
+            <img className="editor-image" src={item.image} alt={item.title} />
             <div className="e-item-detail">
-                <div className="e-title">Stuffed sticky rice ball</div>
-                <div className="e-time">34 minutes</div>
+                <button className="bookmark-button editor-bookmark" aria-label={`Save ${item.title}`}></button>
+                <div className="e-title">{item.title}</div>
+                <div className="e-time">{item.time}</div>
                 <div className="e-auth">
-                    <img src="./G1.jpg"></img>
-                    <div className="e-name">Jennifer King</div>
+                    <img src={item.avatar} alt={item.author}></img>
+                    <div className="e-name">{item.author}</div>
                 </div>
-                <div className="e-des">Stuffed sticky rice balls: A delightful Asian treat with chewy, glutinous rice and a flavorful surprise filling...</div>
+                <div className="e-des">{item.description}</div>
             </div>
         </div>
     );
