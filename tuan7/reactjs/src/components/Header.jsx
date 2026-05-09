@@ -1,6 +1,6 @@
 import "./Header.css"
-function Header(){
 
+function Header({ onLogin, onSubscribe }) {
     return(
         <header className="site-header">
             <div className="brand">
@@ -13,7 +13,7 @@ function Header(){
             </div>
 
             <div className="search-box">
-                <span className="search-icon">⌕</span>
+                <span className="search-icon" aria-hidden="true"></span>
                 <input placeholder="What would you like to cook?"></input>
             </div>
 
@@ -26,8 +26,8 @@ function Header(){
             </nav>
 
             <div className="header-actions">
-                <button className="login-button">Login</button>
-                <button className="subscribe-button">Subscribe</button>
+                <button className="login-button" type="button" onClick={onLogin}>Login</button>
+                <button className="subscribe-button" type="button" onClick={onSubscribe}>Subscribe</button>
             </div>
         </header>
     );
